@@ -1,15 +1,23 @@
 <?php
 //25. Ваше задание создать массив, наполнить это случайными значениями (функция rand),
 // найти максимальное и минимальное значение и поменять их местами
-$arr=[1,2];
-for($i=0; $i<10; $i++) {
-    $arr[$i] = rand(0,10);
+for ($i=0; $i<10; $i++){
+    $arr[]=rand(1,20);
 }
-print_r($arr);
-$max_arr=max($arr);
+var_dump($arr);
 $min_arr=min($arr);
-$max_arr=$min_arr+$max_arr;//1+10
-$min_arr=$max_arr-$min_arr;//11-1
-$max_arr=$max_arr-$min_arr;//11-10
-echo $max_arr."\n";
-echo $min_arr;
+echo 'Минимальное значение в массиве =' . "$min_arr" . "<br>";
+$max_arr=max($arr);
+echo 'Максимальное значение в массиве =' . "$max_arr" . "<br>";
+
+
+$min_key = array_search($min_arr, $arr);
+echo "минимальный ключ: $min_key<br>" ;
+$max_key = array_search($max_arr, $arr);
+echo "максимальный ключ: $max_key<br><hr>" ;
+
+$arr[$min_key] = $max_arr;
+$arr[$max_key] = $min_arr;
+
+echo "Замена:" . "<br>";
+var_dump($arr);

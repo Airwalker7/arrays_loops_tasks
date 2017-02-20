@@ -3,7 +3,9 @@
 // Проверьте работу скрипта на примере массива с элементами 4, 2, 5, 19, 13, 0, 10.
 
 $arr=[4, 2, 5, 19, 13, 0, 10];
-    foreach ($arr as $val){
-       echo count($arr, COUNT_RECURSIVE);
-       break;
-    }
+$count=0;
+foreach ($arr as $i)
+{
+    $count++;
+}
+echo "$count";

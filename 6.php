@@ -8,16 +8,10 @@ $arr = ['green'=>'зеленый', 'red'=>'красный','blue'=>'голубо
 //$ru = ['зеленый', 'красный', 'голубой'];
 
     foreach ($arr as $key => $val){
-        $en = [];
-        $en = $key;
-        print_r($en . "<br>");
-//        var_dump($en . "<br>");
+        $en[] = $key;
+        $ru[] = $val;
     }
-    echo "<br>" . "<hr>" . "<br>";
-
-    foreach ($arr as $key => $val){
-        $ru = [];
-        $ru = $val;
-        print_r($ru . "<br>");
-    //        var_dump($ru . "<br>");
-    }
+var_dump($en);
+"<br>";
+var_dump($ru);
+"<br>";
